@@ -1,0 +1,26 @@
+For this lab, we are going to explore contracts in more detail.
+
+Exercise 1: to Define a function to rotate a buffer to the left
+n times. The buffer is just a list and n is a natural number. For
+example rotating (1 2 3) to the left 1 time results in (2 3 1).
+Rotating three times results in (1 2 3). Rotating 2 times gives
+rise to (3 1 2).
+
+Fill in the ...'s. Provide tests. Check that the function you
+define satisfies the contract below and perform body contract
+checking. 
+
+(defunc Rotate-buffer-left (l n)
+  :input-contract (and (listp l) (natp n))
+  :output-contract (listp (Rotate-buffer-left l n))
+  ...)
+
+Exercise 2: You will be given several incorrect definitions of
+Rotate-buffer-left to analyze.
+
+Exercise 3: Define a version of Rotate-buffer-left that is
+guaranteed to lead to less recursive calls than the length of the
+list. You can use a helper function if you wish and you can
+assume that you have access to any arithmetic functions you want
+to use.
+
